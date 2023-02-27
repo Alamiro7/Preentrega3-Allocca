@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*Bordes de la imagen del logo*/
+
+
+.border-nav{
+    border-radius: 25px;
+}
+.border-nav:hover{
+    border-radius: 40px;
+
+}
+/* Hago que los textos de los li esten centrados*/ 
+.nav-item{
+    text-align: center;
+    padding:40px;
+}
+.nav-item:hover{
+    background-color:rgba(48,80,209,255);
+    
+}
+
+
+/*Para poner el texto dentro de las cards en el centro*/
+.row{
+    text-align: center;
+}
+
+
+
+/*para que al pasar sobre los telefonos haya algun efecto*/
+
+.card-body:hover{
+    padding:20px;
+}
+/*modifico la lista de datos de contacto*/
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedor li{
+    list-style:none;
+    padding: 15px;
+    text-align: center;
+}
+.border{
+    border: 3px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+@media screen and (max-width:576px){
+
+    /*todo esto es para que al abrir el menu hamburguesa se vean uno abajo de otro porque se veian uno al lado del otro por el container-fluid*/
+    .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .nav-item{
+        width:100%;
+    }
+}
+
