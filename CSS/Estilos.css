@@ -1,80 +1,158 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300&display=swap");
 }
 /*Bordes de la imagen del logo*/
-
-
-.border-nav{
-    border-radius: 25px;
+.border-nav {
+  border-radius: 25px;
 }
-.border-nav:hover{
-    border-radius: 40px;
 
+.border-nav:hover {
+  border-radius: 40px;
 }
-/* Hago que los textos de los li esten centrados*/ 
-.nav-item{
-    text-align: center;
-    padding:40px;
+
+/* Hago que los textos de los li esten centrados*/
+.nav-item {
+  text-align: center;
+  padding: 35px;
 }
-.nav-item:hover{
-    background-color:rgba(48,80,209,255);
-    
+
+.nav-item:hover {
+  background-color:#212529;
+}
+
+.nav-texto {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
 }
 
 
 /*Para poner el texto dentro de las cards en el centro*/
-.row{
-    text-align: center;
+.row {
+  text-align: center;
 }
-
-
 
 /*para que al pasar sobre los telefonos haya algun efecto*/
-
-.card-body:hover{
-    padding:20px;
+.card-body:hover {
+  padding: 20px;
 }
+
 /*modifico la lista de datos de contacto*/
-.contenedor{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
+.contenedor {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
-.contenedor li{
-    list-style:none;
-    padding: 15px;
-    text-align: center;
+/* le doy padding y margin a las cards de los telefonos*/
+.telefonos {
+background-color: #212529;
+  padding: 20px;
 }
-.border{
-    border: 3px solid black;
-    height: 100%;
+
+.border {
+  border: 3px solid black;
+}
+
+form {
+  padding: 20px;
+}
+
+/* le doy padding y margin a los textos h3*/
+h3 {
+  padding: 10px;
+}
+
+/*Para modificar el formulario de contacto*/
+.g-3 {
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/*Para modificar el texto Tu nuevo Remis*/
+.texto {
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 45px;
+  color:white;
+}
+.texto-contacto{
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 45px;
+  color:black;
+}
+
+.texto1 {
+  font-family: "Lato", sans-serif;
+  font-size: 37px;
+  color:white;
+}
+
+.texto2 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color:white
+}
+
+.two-cards{
+  margin-bottom: 10px;
+padding: 20px;
+}
+
+
+
+/*textos footer h3*/
+
+
+h3{
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    padding: 10px;
+}
+@media screen and (max-width: 576px) {
+  /*todo esto es para que al abrir el menu hamburguesa se vean uno abajo de otro porque se veian uno al lado del otro por el container-fluid*/
+  .navbar-nav {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
+  }
+  .nav-item {
+    width: 100%;
+  }
+  /*todo esto es para que las redes del footer se vean bien*/
+  .bg-body-tertiary {
+    display: block;
+  }
+  /*todo esto es para que las cards de servicios cuando bajen a un dispositivo con menos de 576 px ocupen todo el ancho*/
+  .two-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    align-items: center;
+  }
+
+  .centrado{
+    padding:auto;
+    margin: auto;
+  }
 }
 
-
-@media screen and (max-width:576px){
-
-    /*todo esto es para que al abrir el menu hamburguesa se vean uno abajo de otro porque se veian uno al lado del otro por el container-fluid*/
-    .navbar-nav{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-    }
-    .nav-item{
-        width:100%;
-    }
-}
-
+/*# sourceMappingURL=estilos.css.map */
