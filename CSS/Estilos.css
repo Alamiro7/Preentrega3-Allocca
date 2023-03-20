@@ -7,12 +7,50 @@
   font-family: "Lato", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100;300&display=swap");
 }
-/*Bordes de la imagen del logo*/
+/*Variables de SASS*/
+/*Creo una animacion para el logo*/
+.logo {
+  width: 120px;
+  animation-name: efecto-logo;
+  animation-iteration-count: 2;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes efecto-logo {
+  0% {
+    transform: rotate(0);
+    border-radius: 25px;
+  }
+  20% {
+    transform: rotate(72deg);
+    border-radius: 45px;
+  }
+  40% {
+    transform: rotate(144deg);
+    border-radius: 60px;
+  }
+  60% {
+    transform: rotate(216deg);
+    border-radius: 45px;
+  }
+  80% {
+    transform: rotate(288deg);
+    border-radius: 25px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 25px;
+  }
+}
+/*Estilos del nav-bar*/
 .border-nav {
   border-radius: 25px;
+  transition: 2s;
 }
 .border-nav:hover {
-  border-radius: 40px;
+  border-radius: 60px;
 }
 
 /* Hago que los textos de los li esten centrados*/
@@ -78,20 +116,69 @@ h3 {
 
 /*Para modificar el texto Tu nuevo Remis*/
 .texto {
-  font-family: "Lato", sans-serif;
   font-size: 45px;
+  font-family: "Lato";
+  color: white;
   padding-bottom: 20px;
 }
 
-.texto1, .texto2 {
-  font-family: "Lato", sans-serif;
-  font-size: 37px;
+/*Le doy animacion al texto "Tu nuevo remis"*/
+.texto1 {
+  font-size: 38px;
+  font-family: "Lato";
   color: white;
+  animation-name: TNR-pages;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: 2;
 }
 
+@keyframes TNR-pages {
+  0% {
+    transform: scale(1);
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: scale(1.25);
+    transform: skew(10deg, 5deg);
+  }
+  50% {
+    transform: scale(1.5);
+    transform: skew(0deg, 0deg);
+  }
+  75% {
+    transform: scale(1.25);
+    transform: skew(-10deg, -5deg);
+  }
+  100% {
+    transform: scale(1);
+    transform: skew(0deg, 0deg);
+  }
+}
 .texto2 {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: "Lato";
+  color: white;
   font-style: italic;
+  text-align: start;
+}
+
+.appdisponible {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Lato";
+  color: white;
+}
+.appdisponible li {
+  font-size: 18px;
+  font-family: "Lato";
+  color: white;
+  font-style: italic;
+  list-style: none;
+  text-align: start;
 }
 
 @media screen and (max-width: 576px) {
